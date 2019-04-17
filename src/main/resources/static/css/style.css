@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-<meta charset="UTF-8" />
-<title th:text=${title}></title>
-
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -29,17 +19,3 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
 }
-
-</style>
-
-
-</head>
-<body>
-<h1>Hello Admin</h1>
-<a href="/admin/addproduct" class="btn">Add a product</a>
-<p th:unless="${products} and ${products.size()}">No Products :(</p>
-    <ul>
-      <li th:each="product : ${products}" th:text="${product}"></li>
-    </ul>
-</body>
-</html>
